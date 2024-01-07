@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date(get and set)</title>
+</head>
+<body>
+    <script>
+        const date=new Date()
+        document.write(`${date} <br>`)
+        // getFullYear()
+        document.write(`${date.getFullYear()}<br>`)
+        // getMonth()->0-11
+        document.write(`${date.getMonth()} <br>`)
+        // getDate() ->1-31
+        document.write(`${date.getDate()} <br>`)
+        // getDay() ->0-6 
+        document.write(`${date.getDay()}<br>`)
+        // .toLocaleDateString()
+        document.write(`${date.toLocaleDateString()}<br>`)
+        // getHours()->0-23 
+        document.write(`${date.getHours()} <br>`)
+        // getMinutes()->0-59 
+        document.write(`${date.getMinutes()}<br>`)
+        // getSeconds() ->0-59 
+        // getMilliseconds() ->0-999
+        document.write(`${date.getMilliseconds()} <br>`)
+        // .toLocaleTimeString()
+        document.write(`${date.toLocaleTimeString()} <br>`)
+    </script>
+</body>
+</html>

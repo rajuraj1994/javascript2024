@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        // objects always comes in key value pair 
+        const student={
+            firstName:'Sandesh',
+            lastName:'Sapkota',
+            age:20,
+            height:5.5,
+            address:'kathmandu'
+        }
+        document.write(student.firstName+'&nbsp;'+student.lastName+'<br>')
+        document.write(`${student.firstName}&nbsp;${student.lastName}`)
+        document.write('<br>')
+        // define the function showData()
+        // object destructure :{}
+        const showData=({firstName,lastName,age,height,address})=>{
+            return `My name is ${firstName} ${lastName}.I live in ${address}.`
+        }
+       // call the function showData()
+        const result=showData(student)
+        document.write(result)
+
+    </script>
+</body>
+</html>

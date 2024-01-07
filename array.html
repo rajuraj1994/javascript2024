@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        // array ->collection of data
+        const fruits=['mango','orange','papaya','cherry','kiwi']
+        document.write(`${fruits} <br>`)
+        document.write(`${fruits[0]}<br>`)
+        document.write(`${fruits[0][0]} <br>`)
+        // length of the array 
+        document.write(`${fruits.length} <br>`)
+        // pop() -> remove the last array element 
+        fruits.pop()
+        document.write(`${fruits}<br>`)
+        //push(value) -> add new element at the last position of array
+        fruits.push('apple')
+        document.write(`${fruits}<br>`)
+        // shift() -> remove the first array element
+        // unshift(value) -> add new element at first position
+
+        // splice()
+        fruits.splice(2,0,'grapes','banana')
+        // here parameter 2 means index numbers
+        // 0 means number of element removed 
+        document.write(`${fruits}<br>`)
+        fruits.splice(2,1,'litchi')
+        document.write(`${fruits}<br>`)
+        // slice()
+        const newArray=fruits.slice(2)
+        document.write(`${newArray} <br>`)
+        // concat 
+        const number=[1,2,3,4]
+        const result=number.concat(newArray)
+        document.write(`${result} <br>`)
+        // spread operator(...)
+        const test=[...fruits,...number]
+        document.write(`${test} <br>`)
+
+        // sort()-> ascending order
+        fruits.sort()
+        document.write(`${fruits}<br>`)
+        // reverse() -> reverse the array 
+        fruits.reverse()
+        document.write(`${fruits}<br>`)
+
+        const data=[10,100,5,25,50]
+        data.sort(function(x,y){return x-y})
+        document.write(`${data}<br>`)
+
+        document.write(typeof(data))
+        document.write('<br>')
+        document.write(Array.isArray(data))
+        
+    </script>
+</body>
+</html>

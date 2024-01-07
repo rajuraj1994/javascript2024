@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abstraction</title>
+</head>
+<body>
+    <script>
+        class Shape{
+            constructor(){
+                if(this.constructor===Shape){
+                    throw new Error('abstract class cannot be instantiated')
+                }
+            }
+            area(){
+                throw new Error('this method must be implemented by subclass')
+            }
+        }
+
+        class Rectangle extends Shape{
+            constructor(breadth,length){
+                super()
+                this.breadth=breadth
+                this.length=length
+            }
+            area(){
+                return this.length*this.breadth
+            }
+        }
+
+        const rectangle= new Rectangle(10,5)
+        document.write('area of rectangle is ',rectangle.area(),'<br>')
+
+    </script>
+</body>
+</html>

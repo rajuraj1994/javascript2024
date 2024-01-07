@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>polymorphism</title>
+</head>
+<body>
+    <script>
+        class Animal
+        {
+            speak(){
+                document.write(`Different animal have different sounds <br>`)
+            }
+        }
+        class Dog extends Animal
+        {
+            speak(){
+                document.write(`Dog barks like Woof Woof <br>`)
+            }
+        }
+
+        class Cat extends Animal
+        {
+            speak(){
+                document.write(`Cat says Meow Meow <br>`)
+            }
+        }
+        // const animal= new Animal()
+        // animal.speak()
+        // const obj_dog= new Dog()
+        // obj_dog.speak()
+        // const obj_cat= new Cat()
+        // obj_cat.speak()
+
+        const results=[new Animal(),new Cat(),new Dog()]
+        results.forEach(animal=>animal.speak())
+
+
+    </script>
+</body>
+</html>

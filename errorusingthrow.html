@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try throw catch</title>
+</head>
+<body>
+    <script>
+        let x=prompt('Enter the numric value')
+        try{
+            if(x=="") throw "no any data"
+            if(isNaN(x)) throw 'not a numeric value'
+            x=Number(x)
+            if(x<10) throw 'not valid,it is lower than expected'
+            if(x>20) throw 'not valid,it is higher than expected'
+        }
+        catch(err){
+            document.write(err)
+        }
+    </script>
+</body>
+</html>

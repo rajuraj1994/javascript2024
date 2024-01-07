@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+        // function is a block of code to perform the particular task and it is reusable
+        // function is called/envoked by using parenthesis() eg:demo()
+        // define the function using function keyword i.e function demo(){..}
+
+        //define the function 
+        // function demoFunction(){
+        //     alert('this is a function')
+        // }
+
+        // define function using arrow function
+        const demoFunction=()=>document.write('hello world <br>')
+        
+        //call the function
+        demoFunction()
+
+        // function with arguments and return type 
+
+        // defining the function
+        // function addFunction(x,y,z){
+        //     const sum=x+y+z
+        //     return sum 
+        // }
+
+        const addFunction=(num1,num2,num3)=>(num1+num2+num3)
+        
+        // call the function with arguments
+        const result=addFunction(10,20,30)
+        document.write(`${result} <br>`)
+        const show=addFunction(100,50,40)
+        document.write(`${show}<br>`)
+
+        // define the function square 
+        const square=num=> num**2
+        // call function square()
+        var a=parseInt(prompt('enter the number'))
+        var data=square(a)
+        document.write(data)
+    </script>
+</body>
+</html>

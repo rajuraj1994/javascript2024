@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error handling</title>
+</head>
+<body>
+    <script>
+        // try -> defines the code to run
+        // catch -> used to handle the error 
+        // finally -> it is run after the completion of try catch block
+        // throw -> defines the custom error 
+
+        try{
+            promptt('Enter the valid number')
+        }
+        catch(err){
+            document.write(`${err.message} <br>`)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name){
+                this.name=name
+            }
+            greeting(){
+                document.write(`Welcome ${this.name}`)
+            }
+        }
+
+        class Student extends Person{
+            // super keyword used inside a child class denotes its parent class to access the parent's properties and methods
+            // calls only insdie the constructor
+
+            constructor(name){
+                document.write(`student class is created <br>`)
+                // call the super class constructor
+                super(name)
+            }
+
+            test(){
+                document.write(`<br> Hello world`)
+            }
+        }
+        const obj_ramesh= new Student('Ramesh')
+        obj_ramesh.greeting()
+        obj_ramesh.test()
+
+
+    </script>
+</body>
+</html>

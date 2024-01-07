@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested if</title>
+</head>
+<body>
+    <script>
+        const age=parseInt(prompt('Enter your current age'))
+        if(age<20){
+            document.write('you are not eligible to go for this job')
+        }
+        else{
+            if(age>=20 && age<60){
+                document.write('you are eligible for this job')
+            }
+            else{
+                document.write('you are too old for this job')
+            }
+        }
+    </script>
+</body>
+</html>

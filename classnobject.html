@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class and object</title>
+</head>
+<body>
+    <h1></h1>
+    <h2></h2>
+    <script>
+        class Student{
+            constructor(fname,lname,address){
+                this.firstname=fname
+                this.lastname=lname
+                this.address=address
+            }
+            subject(sub){
+                return sub
+            }
+
+        }
+
+        const obj_ramesh= new Student('ramesh','mahato','chitwan')
+        const obj_sandesh= new Student('sandesh','sapkota','palpa')
+
+        document.querySelector('h1').innerHTML=`${obj_ramesh.firstname} ${obj_ramesh.lastname}`
+        document.querySelector('h2').innerHTML=obj_sandesh.subject('JS')
+
+    </script>
+</body>
+</html>

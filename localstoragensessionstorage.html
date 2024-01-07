@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage and session storage</title>
+</head>
+<body>
+    <button>Remove</button>
+    <script>
+        localStorage.setItem('test','this is a storage')
+        const show=localStorage.getItem('test')
+        console.log(show)
+        document.querySelector('button').addEventListener('click',()=>{
+            localStorage.removeItem('test')
+        })
+        //JSON -> javascript object notation
+        const student={
+            'firstName':'Ramesh',
+            'lastName':'Mahato',
+            'address':'Chitwan',
+            'age':25,
+            'subjects':['html','css','js','react']
+        }
+        localStorage.setItem('info',JSON.stringify(student))
+        const data=localStorage.getItem('info')
+        const result=JSON.parse(data)
+        console.log(result)
+        console.log(result.firstName)
+        console.log(result.subjects[0])
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string methods</title>
+</head>
+<body>
+    <script>
+        const text='We are learning javascript and javascript is a popular scripting language for web.'
+        document.write(`${text} <br>`)
+        //indexing -> starts from 0
+        document.write(`${text[0]} <br>`)
+        // count the no of characters in a string use .length
+        document.write(`${text.length}<br>`)
+        // indexOf() -> finds the position of string : search()
+        document.write(`${text.indexOf('learning')}<br>`)
+        document.write(`${text.search('javascript')}<br>`)
+        // lastIndexOf()
+
+        // toUpperCase() 
+        document.write(`${text.toUpperCase()} <br>`)
+        // toLowerCase()
+
+        // replace
+        document.write(`${text.replace('javascript','js')} <br>`)
+        // replaceAll
+
+        // substring -> small part of a string
+        // slice(start,end)->slice(0,20)
+        // substring(start,end)->substring(5,30)
+        // substr(start,length)->substr(5,30)
+        document.write(`${text.slice(0,26)}................<br>`)
+        document.write(`${text.substring(5,30)}................<br>`)
+        document.write(`${text.substr(5,30)}................<br>`)
+        // includes()
+        document.write(`${text.includes('javascript')} <br>`)
+        // split()
+        document.write(`${text.split(' ')} <br>`)
+        document.write(`${text.split('javascript')} <br>`)
+        // trim()-> remove whitespace
+        const a='   hello    '
+        document.write(`${a.trim()}`)
+        
+        // number methods:
+        // toFixed(),toPrecision(),toExponential(),toString()
+        // Number(),parseInt(),parseFloat()
+
+
+    </script>
+</body>
+</html>

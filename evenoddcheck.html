@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even odd check</title>
+</head>
+<body>
+    <label for="num">Enter any numeric value</label><br>
+    <input type="number" name="num" id="num">
+    <button onclick="check()">Check the number</button>
+    <p></p>
+    <script>
+        const check=()=>{
+            const inputData=parseInt(document.getElementById('num').value)
+            if(inputData%2==0){
+                document.querySelector('p').innerHTML='even number'
+            }
+            else{
+                document.querySelector('p').innerHTML='odd number'
+            }
+        }
+    </script>
+</body>
+</html>

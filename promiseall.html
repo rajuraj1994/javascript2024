@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all</title>
+</head>
+<body>
+    <script>
+        const Test1=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>resolve('Results from test 1 are listed'),2000)
+            })
+        }
+        const Test2=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>resolve('Results from test 2 are listed'),1500)
+            })
+        }
+        const Test3=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>resolve('Results from test 3 are listed'),2500)
+            })
+        }
+        const Test4=()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>resolve('Results from test 4 are listed'),1200)
+            })
+        }
+
+        Promise.all([Test1(),Test2(),Test3(),Test4()])
+        .then(res=>console.log('results are:',res))
+        .catch(err=>console.error(err))
+
+
+    </script>
+</body>
+</html>

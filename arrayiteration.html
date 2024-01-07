@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array iteration</title>
+</head>
+<body>
+    <pre>
+        forEach
+        map or flatMap
+        filter 
+        reduce and reduceRight
+        every
+        some
+        find
+    </pre>
+    <script>
+        // forEach method iterate/loops over the element of the array
+        // it will not change the original array
+        const numbers=[5,10,20,30,50]
+        // const demoFunction=num=>{
+        //   document.write(`${num**2}<br>`)  
+        // }
+        // numbers.forEach(demoFunction)
+        numbers.forEach(num=>
+            document.write(`${num**2}<br>`) 
+        )
+
+        document.write('<br>')
+        // map method iterates over the element of the array 
+        // it will not change the original array
+        // it returns the new array
+        const result=numbers.map(num=>{
+            return num*10
+        })
+        document.write(`${result} <br>`)
+        document.write(`${result[0]} <br>`)
+        // flatMap()
+
+        // filter()
+        const filterData=numbers.filter(num=>{
+            return num>10 && num<50
+        })
+        document.write(`${filterData} <br>`)
+
+        // reduce()
+        // reduce methods runs a function on each array element to produce the single value 
+        const totalPrice=numbers.reduce((total,value)=>{
+            //numbers.reduce((a,b)=>a+b,0)
+            // accumulator
+            // currentValue
+            console.log('total',total)
+            console.log('value',value)
+
+            return total+value
+        },0)
+        document.write(`${totalPrice}<br>`)
+
+        // reduceRight()
+
+        // every() ->checks if all array element passes a test(condition)
+        const check=numbers.every(num=>{
+            return num>20
+        })
+        document.write(`${check}<br>`)
+
+        // some() -> check if some array element pass the test
+
+        //find() -> returns the value of the first array element that passes a test 
+        const testData=numbers.find(x=>{
+            return x>10
+        })
+        document.write(`${testData} <br>`)
+
+        // includes()-> check if element is present or not 
+        document.write(`${numbers.includes(100)}<br>`)
+        document.write(`${numbers.includes(10)}<br>`)
+        
+    </script>
+</body>
+</html>

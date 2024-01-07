@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onkeyup</title>
+</head>
+<body>
+    <input type="password" name="pwd" id="pwd">
+    <h2 id="show"></h2>
+
+    <script>
+        const pwdInput=document.querySelector('#pwd')
+
+        // const demoFunction=()=>{
+        //     document.getElementById('show').innerHTML=pwdInput.value
+        // }
+        // addEventListener
+        pwdInput.addEventListener('keyup',()=>{
+            document.getElementById('show').innerHTML=pwdInput.value
+        })
+    </script>
+</body>
+</html>

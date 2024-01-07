@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch data</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        fetch(`https://fakestoreapi.com/products`)
+        .then(res=>res.json())
+        .then(products=>{
+            const filterProduct=products.filter(item=>{
+                return item.price>20
+            })
+            console.log(filterProduct)
+            let productList=''
+            filterProduct.map(data=>{
+                productList+=`
+                <div>
+                    <h1>${data.title}</h1>
+                    <h2>$${data.price}</h2>
+                    <img src='${data.image}' alt='${data.title}' width='300'>
+                    </div>
+                `
+            })
+            document.querySelector('div').innerHTML=productList
+
+        })
+        .catch(err=>console.log(err))
+
+    </script>
+</body>
+</html>

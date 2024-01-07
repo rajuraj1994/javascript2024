@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async/await</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const students=[
+            {fullName:'Ramesh Mahato',address:'Chitwan'},
+            {fullName:'Karlos Lama',address:'Kathmandu'}
+        ]
+
+        // define the function showStudent
+        const showStudent=()=>{
+            setTimeout(()=>{
+                let result=""
+                students.forEach(info=>{
+                    result+=`<ul>
+                        <li>${info.fullName}
+                            <ul>
+                                <li>${info.address}</li>
+                                </ul>
+                            </li>
+                        </ul>`
+                })
+                document.querySelector('div').innerHTML=result
+            },2000)
+        }
+        // define the function addStudent()
+        const addStudent=data=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    students.push(data)
+                    const test=false
+                    if(!test){
+                        resolve()
+                    }
+                    else{
+                        reject('something went wrong')
+                    }
+                },3000)
+            })
+        }
+
+       
+
+        const demoFunction=async()=>{
+            await addStudent({fullName:'Sandesh Sapkota',address:'Palpa'})
+            showStudent()
+        }
+
+        demoFunction()
+        
+
+    </script>
+</body>
+</html>

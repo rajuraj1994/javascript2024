@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const students=[
+            {fullName:'Ramesh Mahato',address:'Chitwan'},
+            {fullName:'Karlos Lama',address:'Kathmandu'}
+        ]
+
+        // define the function showStudent
+        const showStudent=()=>{
+            setTimeout(()=>{
+                let result=""
+                students.forEach(info=>{
+                    result+=`<ul>
+                        <li>${info.fullName}
+                            <ul>
+                                <li>${info.address}</li>
+                                </ul>
+                            </li>
+                        </ul>`
+                })
+                document.querySelector('div').innerHTML=result
+            },2000)
+        }
+
+        //call the function showStudent()
+        // showStudent()
+
+        //define the function addStudent()
+        const addStudent=(data,callback)=>{
+            setTimeout(()=>{
+                students.push(data)
+                callback()
+            },3000)
+        }
+
+        // call the function addStudent()
+        addStudent({fullName:'Sandesh Sapkota',address:'Palpa'},showStudent)
+
+    </script>
+    
+</body>
+</html>

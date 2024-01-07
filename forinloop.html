@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in loop</title>
+</head>
+<body>
+    <script>
+        // for in loop loops/iterate through the properties of object and it is mainly used for collection data
+        const student={
+            name:'Ram Thapa',
+            address:'Kathmandu',
+            age:25,
+            email:'ram@gmail.com'
+        }
+        for(let x in student){
+            document.write(`${x}:${student[x]} <br>`)
+        }
+        document.write('<br>')
+        const fruits=['apple','mango','banana','orange']
+        for(let y in fruits){
+            document.write(`${fruits[y]} <br>`)
+        }
+    </script>
+</body>
+</html>
